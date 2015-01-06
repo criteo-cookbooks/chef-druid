@@ -106,6 +106,6 @@ action :install do
   service "druid-#{node_type}" do
     provider Chef::Provider::Service::Upstart
     supports :restart => true, :start => true, :stop => true
-    action [:enable, :restart]
+    action [:enable, :start]
   end
 end
