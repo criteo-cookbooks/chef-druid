@@ -26,7 +26,7 @@ action :install do
 
 
   # Download and extract
-  druid_dir = "druid-services-#{node[:druid][:version]}"
+  druid_dir = "druid-#{node[:druid][:version]}"
   druid_archive = "#{druid_dir}-bin.tar.gz"
   remote_file ::File.join(Chef::Config[:file_cache_path], druid_archive) do
     Chef::Log.info("Installing file '#{druid_archive}' from site '#{node[:druid][:mirror]}'")
